@@ -1,5 +1,6 @@
-const Person = require('./classes/Person.js')
-
+const Person = require('./classes/Person.js');
+const Player = require('./classes/Player.js');
+const NPC = require('./classes/NPC.js');
 
 function main (){
     console.log('This is our main function.')
@@ -19,5 +20,14 @@ function main (){
     player2.updateX(5);
     player2.updateY(7);
     console.log(player2.location);
+
+
+    const player = new Player('Conina',"Wizard",[10,2], "Battleaxe");
+    console.log(player.weapon);
+    console.log(player);
+
+    const npc = new NPC("Pauly", "Wizard");
+    console.log(NPC.NPC_TOTAL);
+    console.log(NPC.compareType(npc, player));
 }
 main();
